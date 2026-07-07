@@ -1,7 +1,0 @@
-this is my file one
-add one mor econtent to file one
-\add another bug fixed
-
-another fix message for pink mode
-
-another fix mode for purple mode
