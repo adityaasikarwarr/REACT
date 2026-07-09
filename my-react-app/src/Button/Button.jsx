@@ -1,5 +1,13 @@
-import styles from './Button.module.css';
+// import styles from './Button.module.css';
 function Button () {
-    return (<button className={styles.btn}>Click me</button>)
+    const styles = {
+        backgroundColor: 'blue',
+        color: 'white',
+        border: 'none',
+        borderRadius: '5px',
+        padding: '10px 20px',
+        cursor: 'pointer'
+    }
+    return (<button style={styles}>Click me</button>)
 }
 export default Button;
