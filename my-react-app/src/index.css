@@ -19,3 +19,12 @@
     font-family : "Arial", sans-serif;
     color : hsl(0, 0% , 30%)
 }
+
+.btn {
+    background-color : hsl(200, 100%, 50%);
+    color : white;
+    border : none;
+    border-radius : 5px;
+    padding : 10px 20px;
+    cursor : pointer;
+}
