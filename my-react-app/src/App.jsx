@@ -1,5 +1,4 @@
-// import List from "./List.jsx";
-import Button from "./button.jsx";
+import MyComponent from "./mycomponent";
 function App() {
   // const fruits = [
   //   { id: 1, name: "Apple", calories: 95 },
@@ -18,12 +17,9 @@ function App() {
   // ];
 
   return (
-    // <>
-    //   <List items={fruits} category="Fruits" />
-    //   <List items={vegetables} category="Vegetables" />
-    // </>
-    <Button></Button>
+    <>
+      <MyComponent></MyComponent>
+    </>
   );
 }
 export default App;
-
