@@ -1,4 +1,4 @@
-import Counter from "./Counter";
+import MyComponent from "./mycomponent";
 function App() {
   // const fruits = [
   //   { id: 1, name: "Apple", calories: 95 },
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <Counter></Counter>
+      <MyComponent></MyComponent>
     </>
   );
 }
