@@ -1,4 +1,4 @@
-import MyComponent from "./mycomponent";
+import ColorPicker from "./ColorPicker";
 function App() {
   // const fruits = [
   //   { id: 1, name: "Apple", calories: 95 },
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <MyComponent></MyComponent>
+     <ColorPicker></ColorPicker>
     </>
   );
 }

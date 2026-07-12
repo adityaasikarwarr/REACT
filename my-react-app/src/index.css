@@ -35,7 +35,7 @@
   margin: 0;
 } */
 
-.counter {
+/* .counter {
   text-align: center;
   font-family: "Arial", sans-serif;
 }
@@ -59,4 +59,31 @@
 
 .counter-button:hover {
   background-color: hsl(200, 70%, 40%);
+} */
+
+.color-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Arial", sans-serif;
 }
+
+h1{
+  margin: 50px;
+  font-size: 3em;
+}
+
+.color-display {
+  width: 200px;
+  height: 200px;
+  border: 1px solid hsl(0, 0%, 0%, 0.1);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+
