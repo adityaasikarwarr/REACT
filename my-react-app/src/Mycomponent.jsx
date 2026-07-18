@@ -31,43 +31,107 @@ import React, { useState } from "react";
 // }
 // export default MyComponent;
 
+// function MyComponent() {
+//   const [foods, setFoods] = useState([
+//     "Apple",
+//     "Banana",
+//     "Cherry",
+//     "Date",
+//     "Elderberry",
+//   ]);
+
+//   function addFood() {
+
+//   const newFood = document.getElementById("foodInput").value;
+//     document.getElementById("foodInput").value = "";
+//     setFoods((f) => [...f, newFood]);
+//   }
+
+//   function removeFood(index) {
+//     setFoods((f) => f.filter((_, i) => i !== index));
+//   }
+
+//   return (
+//     <div>
+//       <h2>List of Foods</h2>
+
+//       <ul>
+//         {foods.map((food, index) => (
+//           <li key={index}>
+//             {food}
+//             <button onClick={() => removeFood(index)}>Remove</button>
+//           </li>
+//         ))}
+//       </ul>
+
+//       <input type="text" id="foodInput" placeholder="Enter a food item" />
+//       <button onClick={addFood}>Add Food</button>
+//     </div>
+//   );
+// }
+
+// export default MyComponent;
+
 function MyComponent() {
-  const [foods, setFoods] = useState([
-    "Apple",
-    "Banana",
-    "Cherry",
-    "Date",
-    "Elderberry",
-  ]);
+  const [cars, setCars] = useState([]);
+  const [carYear, setCarYear] = useState(new Date().getFullYear());
+  const [carMake, setCarMake] = useState("");
+  const [carModel, setCarModel] = useState("");
 
-  function addFood() {
-
-  const newFood = document.getElementById("foodInput").value;
-    document.getElementById("foodInput").value = "";
-    setFoods((f) => [...f, newFood]);
+  function handleAddCar() {
+    const newCar = { year: carYear, make: carMake, model: carModel };
+    setCars((c) => [...c, newCar]);
+    setCarYear(new Date().getFullYear());
+    setCarMake("");
+    setCarModel("");
   }
-
-  function removeFood(index) {
-    setFoods((f) => f.filter((_, i) => i !== index));
+  function handleRemoveCar(index) {
+    setCars((c) => c.filter((_, i) => i !== index));
+  }
+  function handleYearChange(event) {
+    setCarYear(event.target.value);
+  }
+  function handleMakeChange(event) {
+    setCarMake(event.target.value);
+  }
+  function handleModelChange(event) {
+    setCarModel(event.target.value);
   }
 
   return (
     <div>
-      <h2>List of Foods</h2>
-
+      <h2>List of Cars</h2>
       <ul>
-        {foods.map((food, index) => (
+        {cars.map((car, index) => (
           <li key={index}>
-            {food}
-            <button onClick={() => removeFood(index)}>Remove</button>
+            {car.year} {car.make} {car.model}
+            <button onClick={() => handleRemoveCar(index)}>Remove</button>
           </li>
         ))}
       </ul>
 
-      <input type="text" id="foodInput" placeholder="Enter a food item" />
-      <button onClick={addFood}>Add Food</button>
+      <input type="number" value={carYear} onChange={handleYearChange} />
+      <br />
+      <input
+        type="text"
+        value={carMake}
+        onChange={handleMakeChange}
+        placeholder="Enter car make"
+      />
+
+      <br />
+
+      <input
+        type="text"
+        value={carModel}
+        onChange={handleModelChange}
+        placeholder="Enter car model"
+      />
+
+      <br />
+
+      <button onClick={handleAddCar}>Add car</button>
     </div>
   );
 }
-
 export default MyComponent;
