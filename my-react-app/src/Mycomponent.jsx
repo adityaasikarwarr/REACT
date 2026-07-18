@@ -41,7 +41,8 @@ function MyComponent() {
   ]);
 
   function addFood() {
-    const newFood = document.getElementById("foodInput").value;
+
+  const newFood = document.getElementById("foodInput").value;
     document.getElementById("foodInput").value = "";
     setFoods((f) => [...f, newFood]);
   }
